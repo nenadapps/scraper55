@@ -87,9 +87,9 @@ def get_details(url):
     
     images = []                    
     try:
-        image_items = html.select('.wp-post-image')
+        image_items = html.select('.images a')
         for image_item in image_items:
-            img = image_item.get('src')
+            img = image_item.get('href')
             if img not in images:
                 images.append(img)
     except:
